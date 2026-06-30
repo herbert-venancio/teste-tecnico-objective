@@ -1,0 +1,25 @@
+{
+  "name": "teste-tecnico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:api": "cypress run --spec 'cypress/e2e/api/**/*.cy.js'",
+    "cy:run:ui": "cypress run --spec 'cypress/e2e/ui/**/*.cy.js'",
+    "lint": "eslint 'cypress/**/*.js'",
+    "format": "prettier --write 'cypress/**/*.js'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "cypress": "^15.18.0",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-cypress": "^6.4.2",
+    "prettier": "^3.9.4"
+  }
+}
