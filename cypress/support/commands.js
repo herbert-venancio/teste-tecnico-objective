@@ -41,8 +41,10 @@ Cypress.Commands.add('apiDeleteProduct', (id, token) => {
   });
 });
 
-Cypress.Commands.add('loginViaApi', (email, password) => {
+Cypress.Commands.add('loginViaApi', (email, password, nome = '') => {
   cy.apiLogin(email, password).then((token) => {
     window.localStorage.setItem('serverest/userToken', token);
+    window.localStorage.setItem('serverest/userEmail', email);
+    window.localStorage.setItem('serverest/userNome', nome);
   });
 });

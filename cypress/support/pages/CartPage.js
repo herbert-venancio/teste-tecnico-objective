@@ -1,18 +1,18 @@
 class CartPage {
-  get cartButton() {
-    return cy.get('[data-testid="icon-carrinho"]');
+  get addToCartButton() {
+    return cy.get('[data-testid="adicionar carrinho"]');
   }
 
-  open() {
-    this.cartButton.click();
+  get productName() {
+    return cy.get('[data-testid="shopping-cart-product-name"]');
   }
 
-  getItemByName(name) {
-    return cy.contains('[data-testid="produto-carrinho"]', name);
+  get productQuantity() {
+    return cy.get('[data-testid="shopping-cart-product-quantity"]');
   }
 
-  getItemQuantity(name) {
-    return this.getItemByName(name).find('[data-testid="quantidade"]');
+  confirmAddToCart() {
+    this.addToCartButton.click();
   }
 }
 
